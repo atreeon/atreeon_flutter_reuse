@@ -27,7 +27,7 @@ class _MeasureSizeRenderObjectDemoState extends State<MeasureSizeRenderObjectDem
   Widget build(BuildContext context) {
     return Column(
       children: [
-        Text("hello"),
+        Text(myChildSize.height.toString()),
         Expanded(
           child: MeasureSize(
             onChange: (size) {
@@ -42,15 +42,3 @@ class _MeasureSizeRenderObjectDemoState extends State<MeasureSizeRenderObjectDem
     );
   }
 }
-
-//class MeasureSizeRenderObjectDemo extends StatelessWidget {
-//    Widget build(BuildContext context) {
-//      return MeasureSize(
-//          onChange: (size) {
-//            setState(() {
-//              myChildSize = size;
-//            });
-//          },
-//          child: Text('blah'),
-//      );
-//}

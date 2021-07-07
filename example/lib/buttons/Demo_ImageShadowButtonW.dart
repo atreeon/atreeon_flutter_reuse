@@ -1,4 +1,4 @@
-import 'package:atreeon_flutter_reuse/ImageShadowButtonW.dart';
+import 'package:atreeon_flutter_reuse/buttons/ImageShadowButtonW.dart';
 import 'package:flutter/material.dart';
 
 class Demo_ImageShadowButtonW extends StatelessWidget {

@@ -1,4 +1,4 @@
-import 'package:atreeon_flutter_reuse/IconToggleButton.dart';
+import 'package:atreeon_flutter_reuse/buttons/IconToggleButton.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 

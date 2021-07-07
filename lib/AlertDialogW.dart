@@ -17,13 +17,13 @@ import 'package:flutter/material.dart';
 ///          ),
 class AlertDialogYesNoW extends StatelessWidget {
   final String title;
-  final String content;
+  final String? content;
   final void Function() onPressed;
   final Color backgroundColor;
 
   AlertDialogYesNoW({
     required this.title,
-    required this.content,
+    this.content,
     required this.onPressed,
     this.backgroundColor = const Color(0xFFEF9A9A), //Colors.red[200] - pale red
   });
@@ -31,7 +31,7 @@ class AlertDialogYesNoW extends StatelessWidget {
   Widget build(BuildContext context) {
     return AlertDialog(
       title: Text(title),
-      content: Text(content),
+      content: Text(content ?? title),
       actions: [
         TextButton(
           child: Text(

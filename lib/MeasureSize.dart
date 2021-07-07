@@ -6,8 +6,9 @@ typedef void OnWidgetSizeChange(Size size);
 class MeasureSizeRenderObject extends RenderProxyBox {
   Size? oldSize;
   final OnWidgetSizeChange onChange;
+  final bool enabled;
 
-  MeasureSizeRenderObject(this.onChange);
+  MeasureSizeRenderObject(this.onChange, {this.enabled = true});
 
   void performLayout() {
     super.performLayout();
@@ -22,6 +23,7 @@ class MeasureSizeRenderObject extends RenderProxyBox {
   }
 }
 
+///Returns the size of the child object
 class MeasureSize extends SingleChildRenderObjectWidget {
   final OnWidgetSizeChange onChange;
 

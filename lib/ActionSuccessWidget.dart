@@ -11,7 +11,7 @@ import 'package:flutter/material.dart';
 /// then the onSuccess function is run & a new actionKey is created
 class ActionSuccessWidget extends StatefulWidget {
   final Widget Function(BuildContext, int) builder;
-  final void Function() onSuccess;
+  final void Function(int actionKey) onSuccess;
   final StreamSubscription Function(int, void Function()) getCompletedStream;
 
   const ActionSuccessWidget({
@@ -31,7 +31,7 @@ class _ActionSuccessWidgetState extends State<ActionSuccessWidget> {
   void initState() {
     //set new actionKey
     actionKey = Random.secure().nextInt(500000);
-    
+
     //onComplete stream
     onActionKeyCompleteStream = widget.getCompletedStream(actionKey, reset);
     super.initState();
@@ -42,7 +42,7 @@ class _ActionSuccessWidgetState extends State<ActionSuccessWidget> {
 
     setState(() {
       actionKey = Random.secure().nextInt(500000);
-      widget.onSuccess();
+      widget.onSuccess(actionKey);
       onActionKeyCompleteStream = widget.getCompletedStream(actionKey, reset);
     });
   }
